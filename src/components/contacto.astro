@@ -1,0 +1,106 @@
+
+<div class="formulario-contenedor" id="contacto">
+    <div class="form-container">
+        <h2>Contacto</h2>
+        <form action="#" method="post">
+            <label for="nombre">Nombre completo*</label>
+            <input type="text" id="nombre" name="nombre" required />
+
+            <label for="email">Correo electrónico*</label>
+            <input type="email" id="email" name="email" required />
+
+            <label for="asunto">Asunto*</label>
+            <input type="text" id="asunto" name="asunto" required />
+
+            <label for="mensaje">Mensaje*</label>
+            <textarea id="mensaje" name="mensaje" required></textarea>
+
+            <button type="submit">Enviar mensaje</button>
+        </form>
+    </div>
+</div>
+
+<style>
+    .formulario-contenedor{
+        display: flex;
+        justify-content: center;
+        width: 100%;         /* Asegura que ocupe todo el ancho disponible */
+        padding: 0 20px;     /* Añade espacio lateral en móvil */
+        box-sizing: border-box;
+    }
+    .form-container {
+      background-color: var(--color-background-secundary);
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 500px;
+    }
+
+    h2 {
+        text-align: center;
+        margin: 15px;
+        font-size: 2.5rem;
+        color: var(--color-text-secondary);
+        font-family: "Teko", sans-serif;
+        line-height: 20px;
+    }
+
+    label {
+      display: block;
+      font-family: 'Teko', sans-serif;
+      margin-bottom: 8px;
+      font-weight: bold;
+      font-size: 1.2rem;
+      color: var(--color-text-secondary);
+    }
+
+    input, textarea {
+      width: 96%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 1em;
+      font-family: 'Teko', sans-serif;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 80px;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: var(--color-primary);
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 1.4rem;
+      cursor: pointer;
+      font-family: 'Teko', sans-serif;
+    }
+
+    button:hover {
+      background-color:  var(--color-accent);
+    }
+
+    @media (max-width: 501px) {
+        h2{
+          font-size: 4rem;
+          margin-bottom: 10px;
+        }
+        label {
+          font-size: 2.5rem;
+        }
+        button{
+          font-size: 2rem;
+        }
+        .formulario-contenedor {
+            margin-bottom: 60px;
+            width: 800px;
+        }
+    }
+
+  </style>

@@ -1,0 +1,108 @@
+---
+import '../styles/global.css';
+import json from "../data/data.json";
+const bebidasinfo = json.bebidas;
+---
+
+<div class="container-bebidas" id="bebidas">
+    <h1 class="titulo">BEBIDAS</h1>
+    <div class="contenedor-content">
+        {Object.entries(bebidasinfo).map(([sabor, bebidas]) => (
+            <a href="#" class="grupo-sabor">
+                <div class="grupo-sabor-interno">
+                    {bebidas.map((drinks) => (
+                        <img src={drinks.imagen} alt={drinks.sabor} />
+                    ))}
+                </div>
+            </a>
+        ))}
+    </div>
+</div>
+
+<style>
+.container-bebidas{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    gap: 30px;
+    padding-bottom: 30px;
+}
+.titulo{
+    font-family: 'Teko', sans-serif;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    line-height: 24px;
+    color: var(--color-text-primary);
+}
+.contenedor-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 1300px;
+    justify-items: center;
+    align-items: center;
+    margin: auto;
+}
+
+.grupo-sabor img{
+    width: 125px;
+}
+
+.grupo-sabor:hover{
+    filter: drop-shadow(0 0 10px rgb(234, 255, 0));
+}
+
+.grupo-sabor {
+   display: flex;
+   justify-content: center;
+}
+
+.grupo-sabor-interno{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    margin-bottom: 30px;
+    text-align: center;
+    position: relative;
+}
+
+.grupo-sabor-interno img {
+    display: block;
+    margin: auto;
+}
+
+
+.grupo-sabor-interno img:nth-child(1) {
+    position: absolute;
+    left: 50%; /* Lo coloca en el centro del padre */
+    transform: translateX(-90%) translateY(-10px); /* Ajusta el desplazamiento */
+    z-index: -1;
+}
+
+ @media (max-width: 990px){
+        .contenedor-content {
+            display: grid;
+            width: 100%;
+        }
+        .grupo-sabor img{
+            width: 90px;
+        }
+    }
+@media (max-width: 501px) {
+    .contenedor-content {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        width: 800px;
+    }
+    .titulo{
+        font-size: 5rem;
+    }
+    .grupo-sabor img{
+        width: 155px;
+    }
+
+}
+
+</style>

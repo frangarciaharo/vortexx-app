@@ -1,0 +1,40 @@
+:root {
+    --color-accent: #F21B7F;
+    /* Color de acento: para destacar elementos (botones, enlaces activos, etc.) */
+    --color-primary: #0511F2;
+    --color-primary-prueba: linear-gradient(to top, rgba(242, 27, 127, 0.02), rgba(5, 17, 242, 0.2));
+    --color-secondary-prueba: #0d0d0d;
+    /* Color primario: color principal de la marca o tema del sitio */
+    --color-secondary: #04B2D9;
+    /* Color secundario: color complementario que se usa junto al primario */
+    --color-background: #0D0D0D;
+    --color-background-secundary: #F2F2F2;
+    --color-background-tertiary: #0009a4;
+    /* Color de fondo: fondo general del sitio o de secciones */
+    --color-text-primary: #F2F2F2;
+    /* Color del texto: para el texto principal del contenido */
+    --color-text-secondary: #0D0D0D;
+    /* Color del texto: para el texto secundario del contenido */
+}
+
+@font-face {
+    font-family: 'Teko';
+    src: url('/fonts/Teko-VariableFont_wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#bebidas {
+    scroll-margin-top: 120px;
+}
+
+#promociones {
+    scroll-margin-top: 100px;
+}
+
+#atletas {
+    scroll-margin-top: 150px;
+}
+#contacto {
+    scroll-margin-top: 115px;
+}

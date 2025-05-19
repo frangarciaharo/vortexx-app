@@ -1,0 +1,143 @@
+---
+import LogoVortex from '../assets/logo-vortex.png';
+import '../styles/global.css';
+---
+
+<footer class="contenedor-footer">
+    <div class="contenido-footer">
+        <div class="contenido-interno-izq">
+            <img src={LogoVortex.src} alt="Logo de Vortexx" />
+        </div>
+        <div class="contenido-interno-drch">
+            <a href="#bebidas">Bebidas</a>
+            <a href="#promociones">Promociones</a>
+            <a href="#atletas">Atletas</a>
+            <a href="#contacto">Contacto</a>
+        </div>
+    </div>
+    <div class="contenido-inferior">
+        <div class="contenido-inferior-izq">
+            <p>© Vortexx Inc.</p>
+        </div>
+        <div class="contenido-inferior-drch">
+            <a href="#">Cookies</a>
+            <a href="#">Privacidad</a>
+            <a href="#">Términos</a>
+            <a href="#">Cupones</a>
+        </div>
+    </div>
+</footer>
+
+<style>
+.contenedor-footer {
+    background-color: var(--color-background-tertiary);
+    margin-top: 60px;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.05);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.contenido-footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.contenido-interno-izq img {
+    height: 90px;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.contenido-interno-drch {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.contenido-interno-drch a {
+    color: var(--color-text-primary);
+    font-family: 'Teko', sans-serif;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s;
+    text-decoration: none;
+}
+
+.contenido-interno-drch a:hover {
+    color: var(--color-accent);
+}
+
+.contenido-inferior {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+}
+
+.contenido-inferior-izq p {
+   font-family: "Teko", sans-serif;
+    font-size: 1.3rem;
+    margin: 0;
+    text-transform: uppercase;
+    color: var(--color-text-primary);
+    width: 150px;
+    text-align: center;
+}
+
+.contenido-inferior-drch {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.contenido-inferior-drch a {
+    color: var(--color-text-primary);
+    font-family: 'Teko', sans-serif;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contenido-inferior-drch a:hover {
+    color: var(--color-accent);
+}
+
+@media (max-width: 768px) {
+    .contenedor-footer{
+        width: 800px;
+    }
+    .contenido-footer,
+    .contenido-inferior {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .contenido-interno-drch,
+    .contenido-inferior-drch {
+        justify-content: center;
+        
+    }
+    
+    .contenido-inferior-izq p {
+        font-size: 3rem;
+        width: 300px;
+    }
+    .contenido-interno-drch a,
+    .contenido-inferior-drch a{
+        font-size: 3rem;
+    }
+}
+</style>

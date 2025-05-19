@@ -1,0 +1,102 @@
+---
+import Video from '../assets/videos/Video-Hero.mp4';
+---
+<div class="container-hero">
+    <div class="video-content" >
+        <video autoplay muted loop playsinline preload="auto" src={Video}></video>
+    </div>
+    <div class="informacion-content">
+        <h1>Vortex: Sabor intenso. Energía pura.</h1>
+        <p>Explora nuestra gama de bebidas personalizadas para cada ocasión.</p>
+        <button>Explorar</button>
+    </div>
+</div>
+
+<style>
+    .container-hero {
+    height: 650px; /* O la altura que necesites */
+    }
+   .video-content {
+    position: relative;
+    height: 100%;
+    overflow: hidden; 
+    z-index: -1;
+}
+.video-content video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    opacity: 0.3;
+}
+.informacion-content {
+    position: relative;
+    left: 30%;
+    transform: translate(-50%, -130%);
+    color: var( --color-text-primary);
+    z-index: 1;
+    font-family: 'Teko', sans-serif;
+    width: 700px;
+}
+.informacion-content h1{
+    font-size: 50px;
+    margin: 0;
+}
+.informacion-content p{
+    font-size: 30px;
+    margin: 0 0 15px 0;
+}
+.informacion-content button{
+    font-size: 25px;
+    font-family: 'Teko', sans-serif;
+    padding: 5px 10px;
+    width: 100px;
+    border: none;
+    background-color: var(--color-primary);
+    color: var(--color-text-primary);
+    border-radius: 5px;
+}
+.informacion-content button:hover{
+    background-color: var(--color-accent);
+    border: none;
+    cursor: pointer;
+    color: var(--color-text-primary);
+}
+
+@media (max-width: 990px) {
+    .informacion-content{
+        transform: translate(-30%, -130%);
+        width: 620px;
+    }
+    .informacion-content h1{
+        font-size: 40px;
+    }
+    .informacion-content p{
+       font-size: 20px;
+    }
+}
+@media (max-width: 700px) {
+    .informacion-content{
+        transform: translate(-28%, -170%);
+        width: 620px;
+    }
+    .container-hero{
+        height: 800px;
+        width: 800px;
+    }
+    .informacion-content h1{
+        font-size: 52px;
+    }
+    .informacion-content p{
+       font-size: 30px;
+    }
+    .informacion-content button{
+        font-size: 40px;
+        width: auto;
+    }
+
+}
+
+
+
+</style>

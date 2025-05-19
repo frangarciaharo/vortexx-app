@@ -1,0 +1,19 @@
+{
+  "name": "vortexx",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "devDependencies": {
+    "astro": "^5.7.10",
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.3"
+  },
+  "dependencies": {
+    "ngrok": "^5.0.0-beta.2"
+  }
+}

@@ -1,0 +1,30 @@
+---
+import LogoVortex from '../assets/logo-vortex.png';
+import '../styles/global.css';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Vortexx, Hidratación y energía en una mezcla inspirada en los deportes acuáticos.</title>
+		<link rel="icon" type="image/png" href={LogoVortex.src} />
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
+
+<style>
+	html,
+	body {
+		margin: 0;
+		width: 100%;
+		height: 100%;
+	}
+	body{
+		background-color: var(--color-background);
+	}
+</style>

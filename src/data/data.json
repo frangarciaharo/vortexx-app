@@ -1,0 +1,71 @@
+{
+    "bebidas": {
+        "Coco": [{
+                "sabor": "Coco 250ml",
+                "descripcion": "Refrescante y suave, con el exótico sabor natural del coco.",
+                "imagen": "/assets/bebidas/coco/sabor-coco-250.webp"
+            },
+            {
+                "sabor": "Coco 500ml",
+                "descripcion": "Sabor natural de coco en una presentación más grande para compartir.",
+                "imagen": "/assets/bebidas/coco/sabor-coco.webp"
+            }
+        ],
+        "Fresa": [{
+                "sabor": "Fresa 250ml",
+                "descripcion": "Dulce y vibrante, el clásico sabor de la fresa en su punto perfecto.",
+                "imagen": "/assets/bebidas/fresa/sabor-fresa-250.webp"
+            },
+            {
+                "sabor": "Fresa 500ml",
+                "descripcion": "Una versión más grande del clásico sabor de fresa, ideal para compartir.",
+                "imagen": "/assets/bebidas/fresa/sabor-fresa.webp"
+            }
+        ],
+        "Limón y Naranja": [{
+                "sabor": "Limón y Naranja 250ml",
+                "descripcion": "Una mezcla cítrica energizante que combina la acidez del limón con la dulzura de la naranja.",
+                "imagen": "/assets/bebidas/limonnaranja/sabor-lemonorange-250.webp"
+            },
+            {
+                "sabor": "Limón y Naranja 500ml",
+                "descripcion": "El mismo sabor refrescante en una presentación más grande.",
+                "imagen": "/assets/bebidas/limonnaranja/sabor-lemonorange.webp"
+            }
+        ],
+        "Lima": [{
+                "sabor": "Lima 250ml",
+                "descripcion": "Ácida y refrescante, ideal para quienes buscan una experiencia cítrica intensa.",
+                "imagen": "/assets/bebidas/lima/sabor-lima-250.webp"
+            },
+            {
+                "sabor": "Lima 500ml",
+                "descripcion": "La misma experiencia intensa en una presentación más grande.",
+                "imagen": "/assets/bebidas/lima/sabor-lima.webp"
+            }
+        ]
+    },
+    "reseñas": {
+        "reseña 1": [{
+            "autor": "Natxo González",
+            "portada": "/assets/atletas/natxo/portada-natxo.webp",
+            "imagen": "/assets/atletas/natxo/natxo-gonzalez.webp",
+            "comentario": "En el agua, cada segundo cuenta. Esta bebida me mantiene enfocado y con energía desde el primer set hasta el último momento.",
+            "deporte": "Surfero"
+        }],
+        "reseña 2": [{
+            "autor": "Carlos Arévalo",
+            "portada": "/assets/atletas/carlos/portada-carlos.webp",
+            "imagen": "/assets/atletas/carlos/carlos-arevalos.webp",
+            "comentario": "Cuando remas durante kilómetros bajo el sol, necesitas algo más que agua. Esta bebida me da fuerza y resistencia constante.",
+            "deporte": "Piragüista"
+        }],
+        "reseña 3": [{
+            "autor": "Mireia Belmonte",
+            "portada": "/assets/atletas/mireia/portada-mireia.webp",
+            "imagen": "/assets/atletas/mireia/mireia-belmonte.webp",
+            "comentario": "No hay trucos: si no estás bien hidratada, no rindes. Esta bebida me acompaña cada día para mantener mi mejor nivel.",
+            "deporte": "Nadadora"
+        }]
+    }
+}

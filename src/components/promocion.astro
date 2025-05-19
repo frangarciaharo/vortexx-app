@@ -1,0 +1,107 @@
+---
+import '../styles/global.css';
+---
+<div class="container-promociones" id="promociones">
+    <h1 class="titulo">PROMOCIONES</h1>
+    <div class="contenido-promociones">
+        <div class="contenido-interno-promociones-izq">
+            <img src="/assets/bebidas/coco/sabor-coco.webp" alt="Sabor Coco 500 ML">
+        </div>
+        <div class="contenido-interno-promociones-drch">
+            <h1>DESATA LA FURIA DEL COCO </h1>
+            <h3>“Activa tu coco. Despierta tu poder.”</h3>
+            <button>Obtener promocion</button>
+        </div>
+    </div>
+</div>
+
+<style>
+
+    .container-promociones{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        text-align: center;
+    }
+    .contenido-promociones{
+        background-image: url(../assets/Background.webp);
+        clip-path: polygon(0 0, 100% 7%, 100% 100%, 0 89%);
+        background-repeat: no-repeat;
+        height: 560px;
+    }
+    .titulo{
+        font-family: 'Teko', sans-serif;
+        font-size: 2.5rem;
+        text-transform: uppercase;
+        font-weight: 600;
+        line-height: 24px;
+        color: var(--color-text-primary);
+    }
+    .contenido-promociones{
+        display: flex;
+        gap: 300px;
+        justify-content: center;
+    }
+    .contenido-interno-promociones-izq img{
+        height: 600px;
+        transform: rotate(-5deg);
+    }
+    .contenido-interno-promociones-drch{
+        margin-top: 150px;
+    }
+    .contenido-interno-promociones-drch h1{
+        color: var(--color-text-primary);
+        font-family: 'Teko', sans-serif;
+        text-transform: uppercase;
+        font-weight: 600;
+        line-height: 60px;
+        font-size: 5rem;
+        text-align: center;
+        width: 400px;
+        margin: 0;
+    }
+    .contenido-interno-promociones-drch h3{
+        color: var(--color-text-primary);
+        font-family: 'Teko', sans-serif;
+        text-transform: uppercase;
+        font-weight: 600;
+        line-height: 60px;
+        font-size: 2rem;
+        text-align: center;
+        width: 400px;
+        margin: 0;
+    }
+    .contenido-interno-promociones-drch button{
+        padding: 10px 10px;
+        font-family: 'Teko', sans-serif;
+        text-transform: uppercase;
+        font-size: 1.2rem;
+        font-weight: 600;
+        background-color: var(--color-primary);
+        color: var(--color-text-primary);
+        border-radius: 10px;
+        border: none;
+        width: 151.15px;
+    }
+    .contenido-interno-promociones-drch button:hover{
+        background-color: var(--color-accent);  
+        border: none;
+        cursor: pointer;
+    }
+
+    @media (max-width: 990px) {
+        .contenido-promociones{
+            gap: 150px;
+        }
+        .contenido-interno-promociones-drch h1{
+            font-size: 4rem;
+        }
+        .contenido-interno-promociones-drch h3{
+            font-size: 1.6rem;
+        }
+        .titulo{
+            font-size: 5rem;
+        }
+    }
+
+</style>

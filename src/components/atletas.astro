@@ -1,0 +1,210 @@
+---
+import '../styles/global.css';
+import json from "../data/data.json";
+
+// Convertimos los valores de reseñas en un array simple
+const reseñas = Object.values(json.reseñas).map(([item]) => item);
+---
+
+<div class="container-atletas" id="atletas">
+    <div class="titulos">
+        <h1 class="titulo">Leyendas del Deporte</h1>
+        <h3 class="subtitulo">Ellos no solo compiten, también inspiran</h3>
+    </div>
+    <div class="atleta-contenedor">
+        {reseñas.map((item, index) => (
+        <div class="atleta-contenido">
+            <div class="portada">
+              <img src={item.portada} alt={`Portada de ${item.autor}`} />
+            </div>
+            <div class="imagen-autor">
+              <img src={item.imagen} alt={`Portada de ${item.autor}`} />
+            </div>
+            <div class="informacion-atleta">
+              <div class="informacion-superior">
+                <p class="nombre-autor">{item.autor}</p>
+                <p class="deporte-autor">{item.deporte}</p>
+              </div>
+               <div class="informacion-inferior">
+                <p class="comentario-autor">{item.comentario}</p>
+              </div>
+            </div>
+        </div>
+        ))}
+  </div>
+</div>
+
+<style>
+  .container-atletas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #ffffff;
+    margin-top: 50px;
+    padding-bottom: 30px;
+    gap: 20px;
+    margin-bottom: 30px;
+  }
+  .titulos{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .titulo {
+    font-family: 'Teko', sans-serif;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    line-height: 24px;
+    color: var(--color-text-primary);
+    margin: 0;
+  }
+
+  .subtitulo {
+    font-family: 'Teko', sans-serif;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    margin: 0;
+  }
+  .atleta-contenedor{
+    display: grid;
+    gap: 60px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .atleta-contenido{
+    height: 100%;
+    width: 350px;
+    background-color: var(--color-background-secundary);
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+  }
+  .atleta-contenido:hover .portada img {
+    transform: scale(1.05);
+  }
+  .portada{
+    height: 250px;
+  }
+  .portada img{
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .imagen-autor {
+    position: absolute;
+    display: flex;
+    top: 170px;
+    z-index: 1;
+    width: 100%;
+    justify-content: center;
+  }
+  .imagen-autor img {
+  width: 120px; /* ajusta al tamaño que necesites */
+  height: 120px;
+  border-radius: 50%;
+  border: 2px solid #595959;
+  object-fit: cover;
+}
+
+.informacion-superior{
+  display: flex;
+  justify-content: center;
+  gap: 125px;
+  margin-top: 10px;
+}
+
+.nombre-autor{
+  color: var( --color-text-secondary);
+  text-align: center;
+  font-family: 'Teko', sans-serif;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: 0;
+}
+.deporte-autor{
+  color: var( --color-text-secondary);
+  width: 105px;
+  text-align: center;
+  font-family: 'Teko', sans-serif;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: 0;
+}
+
+.informacion-inferior{
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.comentario-autor{
+  color: var( --color-text-secondary);
+  text-align: center;
+  font-family: 'Teko', sans-serif;
+  font-size: 1.2rem;
+  width: 280px;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: 0;
+}
+
+
+@media (max-width: 501px) {
+  .container-atletas{
+    width: 800px;
+  }
+  .titulo{
+    font-size: 5rem;
+    line-height: 60px;
+  }
+  .subtitulo{
+    font-size: 3rem;
+  }
+  .atleta-contenedor{
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .informacion-superior{
+    gap: 260px; 
+  }
+  .nombre-autor{
+    font-size: 2.4rem;
+  }
+  .deporte-autor{
+    font-size: 2.4rem;
+    width: 200px;
+  }
+  .atleta-contenido{
+    width: 700px;
+    height: 600px;
+  }
+  .portada{
+    height: 290px;
+  }
+  .portada img{
+    width: 100%;
+  }
+  .imagen-autor img{
+    width: 200px;
+    height: 200px;
+  }
+  .informacion-inferior{
+    margin-top: 50px;
+  }
+  .comentario-autor{
+    font-size: 2.1rem;
+    width: 530px;
+  }
+}
+
+</style>
